@@ -1,3 +1,5 @@
 export let params = {
-    q: ""
+    q: "",
+    sort: "",
+    order: ""
 };
