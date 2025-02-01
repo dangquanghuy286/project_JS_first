@@ -47,3 +47,21 @@ filter.addEventListener("change", function (event) {
     }
     drawProduct();
 })
+const pagiPev = document.querySelector("#Pa_Prev");
+const pagiNumber = document.querySelector("#Pa_Number");
+const pagiNext = document.querySelector("#Pa_Next");
+pagiNext.addEventListener("click", function () {
+    params.start += params.limit;
+    pagiNumber.textContent = ` ${Math.floor(params.start / params.limit) + 1}`; // Cập nhật số trang
+    drawProduct();
+
+});
+
+pagiPev.addEventListener("click", function () {
+    if (params.start >= params.limit) {
+        params.start -= params.limit;
+    }
+    pagiNumber.textContent = `${Math.floor(params.start / params.limit) + 1}`; // Cập nhật số trang
+    drawProduct();
+});
+

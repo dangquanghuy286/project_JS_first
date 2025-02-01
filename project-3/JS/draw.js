@@ -8,7 +8,9 @@ export const drawProduct = () => {
     console.log("Fetching with params:", params); // In ra thông tin params đang được sử dụng
 
     // Tạo URL API dựa trên params
-    const api = `${API_PRODUCT}?q=${encodeURIComponent(params.q)}&_sort=${params.sort}&_order=${params.order}`;
+    const api = `${API_PRODUCT}?q=${encodeURIComponent(params.q)}&_sort=${params.sort}&_order=${params.order}&_start=${params.start}&_limit=${params.limit}`;
+
+
 
     // Hiển thị spinner khi đang tải dữ liệu
     products.innerHTML = '<div class="spinner">Loading...</div>';

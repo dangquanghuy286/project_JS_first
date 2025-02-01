@@ -116,3 +116,34 @@
         /* 1 sản phẩm mỗi hàng */
     }
 }
+
+#pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-family: Arial, sans-serif;
+}
+
+#pagination span {
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#pagination span:hover {
+    background-color: #00ff0d;
+    color: white;
+}
+
+#Pa_Number {
+    font-weight: bold;
+}
+
+#Pa_Prev,
+#Pa_Next {
+    font-size: 14px;
+}
