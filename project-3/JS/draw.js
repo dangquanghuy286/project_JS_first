@@ -1,8 +1,8 @@
 import { API_PRODUCT } from "./constant.js"; // Nhập khẩu API_PRODUCT từ tệp constant.js
 import { fetchAPI } from "./lopdungchung.js"; // Nhập khẩu hàm fetchAPI từ tệp lopdungchung.js
-import { params } from "./valiable.js"; // Nhập khẩu params từ tệp valiable.js
+import { params, products } from "./valiable.js"; // Nhập khẩu params từ tệp valiable.js
 
-const products = document.querySelector("#products"); // Lấy phần tử có id là "products"
+// Lấy phần tử có id là "products"
 
 export const drawProduct = () => {
     console.log("Fetching with params:", params); // In ra thông tin params đang được sử dụng

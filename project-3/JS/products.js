@@ -1,12 +1,8 @@
 import { drawProduct } from "./draw.js";
-import { params } from "./valiable.js";
+import { buttonSearch, filter, inputSearch, pagiNext, pagiNumber, pagiPev, params } from "./valiable.js";
 
 drawProduct();
-
 // SEARCH
-const inputSearch = document.querySelector("#search input");
-const buttonSearch = document.querySelector("#search button");
-
 // Sự kiện khi nhấn nút tìm kiếm
 buttonSearch.addEventListener("click", function () {
     params.q = inputSearch.value.trim();
@@ -21,7 +17,6 @@ inputSearch.addEventListener("keypress", function (event) {
     }
 });
 // FILLTER
-const filter = document.querySelector("#filter");
 filter.addEventListener("change", function (event) {
     console.log(event.target.value);
     switch (event.target.value) {
@@ -47,9 +42,7 @@ filter.addEventListener("change", function (event) {
     }
     drawProduct();
 })
-const pagiPev = document.querySelector("#Pa_Prev");
-const pagiNumber = document.querySelector("#Pa_Number");
-const pagiNext = document.querySelector("#Pa_Next");
+
 pagiNext.addEventListener("click", function () {
     params.start += params.limit;
     pagiNumber.textContent = ` ${Math.floor(params.start / params.limit) + 1}`; // Cập nhật số trang
